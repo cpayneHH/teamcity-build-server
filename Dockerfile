@@ -35,5 +35,6 @@ RUN chmod +x /usr/local/bin/install_yarn.sh \
 
 # 5. Runtime entrypoint
 COPY teamcity-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/teamcity-entrypoint.sh \
-    && ./usr/local/bin/teamcity-entrypoint.sh
+RUN chmod +x /usr/local/bin/teamcity-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/teamcity-entrypoint.sh"]

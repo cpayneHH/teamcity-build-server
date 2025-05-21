@@ -26,3 +26,6 @@ wget -q "$DOWNLOAD_URL" -O "$ARCHIVE_NAME"
 echo "🔄 Extracting archive..."
 tar xzf "$ARCHIVE_NAME" --strip-components=1
 rm "$ARCHIVE_NAME"
+
+# (re-ensure permissions in case you mount a volume)
+chown -R "${TEAMCITY_USER}:${TEAMCITY_USER}" "${TEAMCITY_HOME}"
