@@ -4,7 +4,9 @@
 
 # keep your project’s SSH keys private
 /data/config/projects/_Root/pluginData/ssh_keys/
-/**/id_ed25519
+# Ignore SSH key files everywhere:
+**/id_ed25519
+**/id_ed25519.pub
 
 # drop everything under plugins and caches
 /data/plugins/
