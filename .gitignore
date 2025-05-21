@@ -1,14 +1,35 @@
-# plugins, config ssh keys, artifacts
-./data/config/projects/_Root/pluginData/ssh_keys/*
-./data/plugins/**/*
-./data/system/caches/**/*
-./data/system/artifacts/**/*.tar.gz
+# ┌────────────────────────────────────────────────────────────┐
+# │   Project Data / Large binary files                      │
+# └────────────────────────────────────────────────────────────┘
 
-# large 25MB files
-./data/plugins/.bundledTools/JetBrains.ReSharper.CommandLineTools.2023.1.1.nupkg
-./data/plugins/.bundledTools/JetBrains.dotCover.CommandLineTools.2023.3.3.nupkg
-./data/plugins/.bundledTools/intellij-tool-ideaIU-2022.1.3.zip
-./data/system/caches/agentTools/idea.zip
-./data/system/caches/agentTools/JetBrains.dotCover.CommandLineTools.bundled.zip
-./data/system/caches/agentTools/jetbrains.resharper-clt.bundled.zip
-./data/system/caches/git/git-D6FD64BF.git/objects/pack/pack-322afa748741e34712c7743ab64079d1156b2b13.pack
+# keep your project’s SSH keys private
+/data/config/projects/_Root/pluginData/ssh_keys/
+
+# drop everything under plugins and caches
+/data/plugins/
+/data/system/caches/
+
+# drop any .tar.gz archives under artifacts (recurses subdirs)
+/data/system/artifacts/**/*.tar.gz
+
+# ┌────────────────────────────────────────────────────────────┐
+# │   (Optional) Pin specific large files if needed           │
+# └────────────────────────────────────────────────────────────┘
+# you don’t strictly need these with the above rules, but
+# if you prefer listing them individually, uncomment:
+#
+# /data/plugins/.bundledTools/JetBrains.ReSharper.CommandLineTools.2023.1.1.nupkg
+# /data/plugins/.bundledTools/JetBrains.dotCover.CommandLineTools.2023.3.3.nupkg
+# /data/plugins/.bundledTools/intellij-tool-ideaIU-2022.1.3.zip
+# /data/system/caches/agentTools/idea.zip
+# /data/system/caches/agentTools/JetBrains.dotCover.CommandLineTools.bundled.zip
+# /data/system/caches/agentTools/jetbrains.resharper-clt.bundled.zip
+# /data/system/caches/git/**/objects/pack/*.pack
+
+# ┌────────────────────────────────────────────────────────────┐
+# │   (Optional) Add any other global ignores below            │
+# └────────────────────────────────────────────────────────────┘
+.DS_Store
+.idea/
+# node_modules/
+# vendor/
