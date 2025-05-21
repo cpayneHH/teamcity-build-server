@@ -1,0 +1,14 @@
+# plugins, config ssh keys, artifacts
+./data/config/projects/_Root/pluginData/ssh_keys/*
+./data/plugins/**/*
+./data/system/caches/**/*
+./data/system/artifacts/**/*.tar.gz
+
+# large 25MB files
+./data/plugins/.bundledTools/JetBrains.ReSharper.CommandLineTools.2023.1.1.nupkg
+./data/plugins/.bundledTools/JetBrains.dotCover.CommandLineTools.2023.3.3.nupkg
+./data/plugins/.bundledTools/intellij-tool-ideaIU-2022.1.3.zip
+./data/system/caches/agentTools/idea.zip
+./data/system/caches/agentTools/JetBrains.dotCover.CommandLineTools.bundled.zip
+./data/system/caches/agentTools/jetbrains.resharper-clt.bundled.zip
+./data/system/caches/git/git-D6FD64BF.git/objects/pack/pack-322afa748741e34712c7743ab64079d1156b2b13.pack
