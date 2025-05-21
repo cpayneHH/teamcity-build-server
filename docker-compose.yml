@@ -1,0 +1,15 @@
+services:
+        ubuntu:
+            container_name: ubuntu22
+            build:
+                context: .
+                dockerfile: Dockerfile
+            tty: true           # keep STDIN open so you can attach a shell
+            stdin_open: true    # same as -i in `docker run`
+            command: bash       # start with bash
+            ports:
+                -   8111:8111
+            volumes:
+                - /Users/cpayne/Sites/quantum-status-portal:/status-portal
+                - ./data:/data/TeamCity_data
+                - ./artifacts:/data/TeamCity_data/system/artifacts
